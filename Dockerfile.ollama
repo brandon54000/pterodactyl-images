@@ -98,7 +98,7 @@ if [ "${READY}" -ne 1 ]; then
   exit 1
 fi
 
-echo "[ollama-start] Listening on ${OLLAMA_HOST}"
+echo "OLLAMA_READY ${OLLAMA_HOST}"
 
 if [ -n "${OLLAMA_AUTO_PULL_MODELS:-}" ]; then
   EXISTING_MODELS="$(ollama ls 2>/dev/null | awk 'NR > 1 { print $1 }' || true)"
